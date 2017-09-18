@@ -14,3 +14,9 @@
 *~txs0
 *.bib
 *.bcf
+*.acn
+*.glo
+*.glg
+*.gls
+*.glsdefs
+*.ist
