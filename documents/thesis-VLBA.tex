@@ -161,8 +161,11 @@
 % Clear styles, and setting page numbers 
 %----------------------------------------------------------------------------------------
 \clearpairofpagestyles
-%\rofoot[\pagemark]{\pagemark}
-\rohead{\pagemark}{\pagemark}
+%\rofoot{\pagemark}
+%\refoot{\pagemark}
+
+\rohead{\pagemark}
+\rehead{\pagemark}
 
 %----------------------------------------------------------------------------------------
 % Generate table of content
@@ -195,9 +198,9 @@
 \section*{Glossar}
 \addcontentsline{toc}{section}{Glossar}
 	% adding via file
-	\input{abbreviations}
+	% \input{abbreviations}
 	% adding directly
-	%\textbf{ACID} \textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation, \textbf{D}urability \\
+	\textbf{ACID} \textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation, \textbf{D}urability \\
 \clearpage
 
 % 
@@ -220,18 +223,24 @@
 %% Line spread
 \onehalfspacing
 
-% --------------------------------
-% CONFIGURE HEADER/FOOTER STYLES
-% --------------------------------
-\pagestyle{scrheadings}
-\clearpairofpagestyles
-\lohead{\rightmark}
-%\rofoot[\pagemark]{\pagemark}
-\rohead{\pagemark}{\pagemark}
-
+% Start numbering again
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+% --------------------------------
+% CONFIGURE HEADER/FOOTER STYLES
+% --------------------------------
+\clearpairofpagestyles
+%\pagestyle{scrheadings}
+\lohead{\rightmark}
+
+% bottom right
+%\rofoot{\pagemark}
+%\refoot{\pagemark}
+
+% top right
+\rehead{\pagemark}
+\rohead{\pagemark}
 
 %----------------------------------------------------------------------------------------
 %
@@ -242,7 +251,6 @@
 % 
 % 
 %----------------------------------------------------------------------------------------
-
 %----------------------------------------------------------------------------------------
 % CONTENT STARTS
 %----------------------------------------------------------------------------------------
@@ -312,13 +320,9 @@ Fußnoten werden in \LaTeX mit dem Befehl $\backslash$footnote erstellt. Dabei b
 \subsubsection{Zitat}
 Das Zitieren verwendeter Literatur erfolgt somit nicht in den Fußnoten, sondern im Haupttext unter Verwendung von $\backslash$cite und BibTeX. Es werden direkte Zitate (d. h. Text wird wörtlich – in Anführungszeichen - übernommen; Quellennachweis ohne ‚vgl.‘) und indirekte Zitate (d. h. sinngemäße Wiedergabe des Textes; Quellennachweis mit ‚vgl.‘) unterschieden. Bei Zitaten mit einer Länge von zwei Seiten wird die erste Seite und "`f."' angegeben, bei mehr als zwei Seiten wird "`ff."' verwendet. \\
 
-z.B. : \\
+z.B.: In-memory databases are playing a huge role in development of the next generation databases \citep{VDInMemory:14}. \\
 
-In-memory databases are playing a huge role in development of the next generation databases \citep{VDInMemory:14}. \\
-
-z.B. : \\
-
-On the other hand, knowledge sharing within the team, which deals with data mining and machine learning daily, is a curtail factor for a successful data analytics cycle \citep{ScalingAirbnb:2015}.
+z.B.: On the other hand, knowledge sharing within the team, which deals with data mining and machine learning daily, is a curtail factor for a successful data analytics cycle \citep{ScalingAirbnb:2015}.
 
 % Managin acronyms with package
 % \subsubsection{Acronym}
