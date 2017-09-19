@@ -36,7 +36,7 @@
 
 % latex page styles
 % \usepackage{fancyhdr}
-\usepackage[automark,headsepline]{scrlayer-scrpage} % style
+\usepackage[automark,headsepline]{scrlayer-scrpage}
 
 % various packages
 \usepackage{geometry}
@@ -80,7 +80,7 @@
 %----------------------------------------------------------------------------------------
 \input{own-styles-and-commands.tex}
 
-\geometry{a4paper,left=3cm,right=3cm}
+\geometry{a4paper, left=3cm, right=3cm}
 %\geometry{a4paper,left=3cm,right=2.5cm}   % Please use these settings for a PhD-thesis
 
 % 
@@ -161,7 +161,8 @@
 % Clear styles, and setting page numbers 
 %----------------------------------------------------------------------------------------
 \clearpairofpagestyles
-\rofoot[\pagemark]{\pagemark}
+%\rofoot[\pagemark]{\pagemark}
+\rohead{\pagemark}{\pagemark}
 
 %----------------------------------------------------------------------------------------
 % Generate table of content
@@ -223,7 +224,8 @@
 \pagestyle{scrheadings}
 \clearpairofpagestyles
 \lohead{\rightmark}
-\rofoot[\pagemark]{\pagemark}
+%\rofoot[\pagemark]{\pagemark}
+\rohead{\pagemark}{\pagemark}
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
@@ -245,7 +247,7 @@
 \section{Einleitung}
 In diesem Abschnitt der Arbeit wird das Ziel formuliert, in einen größeren Zusammenhang eingeordnet und gegen andere Themen abgegrenzt. Die wichtigsten Begriffe des Themas müssen in der Einleitung präzise definiert werden; eine sorgfältige Formulierung ist hier besonders wichtig. Weiterhin können Hinweise zur verwendeten Untersuchungsmethodik gegeben werden. Durch die Darstellung des Gangs der Untersuchung kann auch die Zweckmäßigkeit der gewählten Gliederung hervorgehoben werden.  Nach Möglichkeit sollte dieses Kapitel nicht ‚Einleitung‘ heißen, sondern einen sinnvollen Titel mit Bezug zur Arbeit tragen.
 
-Das einleitende Kapitel sollte also eine Hinführung zum Thema, das Ziel der Arbeit und den Aufbau der Arbeit enthalten. Diese Ausführungen basieren auf der vom jeweiligen Studenten anzufertigenden Disposition/Proposal/Expose.
+Das einleitende Kapitel sollte also eine Hinführung zum Thema, das Ziel der Arbeit und den Aufbau der Arbeit enthalten. Diese Ausführungen basieren auf der vom jeweiligen Studenten anzufertigenden Disposition / Proposal / Exposé.
 
 Die Erfahrung zeigt, dass ein Teil der Einleitung erst zum Schluss der Arbeit ausformuliert  werden sollte. So werden wiederholte Änderungen am Text vermieden.
 
@@ -253,7 +255,7 @@ Zum prinzipiellen Ablauf eines Bachelor/Master-arbeitsvorhabens:
 
 \begin{itemize}
   \item Der Student setzt sich mit dem Betreuer in Verbindung.
-  \item Nach maximal zwei Vorgesprächen erstellt der Student eine Disposition/Proposal  und reicht diese bei seinem Betreuer ein. Die Disposition sollte ungefähr zwei Seiten Umfang haben, das Thema erläutern, das Ziel der Arbeit beschreiben und den geplanten Aufbau darlegen.
+  \item Nach maximal zwei Vorgesprächen erstellt der Student eine Disposition / Proposal / Exposé und reicht diese bei seinem Betreuer ein. Die Disposition sollte ungefähr zwei Seiten Umfang haben, das Thema erläutern, das Ziel der Arbeit beschreiben und den geplanten Aufbau darlegen.
   \item Zur eigenen Hilfestellung hat der Student einen Terminplan anzugeben. Dieser enthält neben angestrebten Abgabetermin entsprechende Meilensteine (z. B. Literaturrecherche beendet; Funktionsmodellierung beendet; Prototyp fertig etc.). Die jeweiligen Meilensteine unterscheiden sich naturgemäß von Arbeit zu Arbeit. Der Terminplan kann dem Studenten zur Kontrolle dienen, inwieweit seine Abschätzungen bezüglich der Dauer bestimmter Tätigkeiten mit dem Ist übereinstimmen und daraus u. U. Korrekturen in der weiteren Vorgehensweise vornehmen (natürlich immer in Absprache mit dem Betreuer).
   \item Wird die Expose angenommen, kann die Masterarbeit angemeldet werden.
   \item Die Bearbeitungsdauer für Bachelor/Master-arbeit  richtet sich nach der zugrunde zu legenden Prüfungsordnung.
@@ -361,7 +363,7 @@ Eine typische Inhaltsverzeichnis für einer Bachelor- bzw. Masterarbeits Exposé
 	\item Methodisches Vorgehen
 	\item Gliederung der Arbeit
 	\item Zeitplan
-	\item Literaturliste
+	\item Literatur
 \end{itemize}
 
 \section{Weitere Abschnitte des Hauptteils}
@@ -402,14 +404,15 @@ Weitere Informationen werden im Anhang abgedruckt (z. B. Listings).
 
 \clearpage
 
+%----------------------------------------------------------------------------------------
+% SIGNATURE 
+%----------------------------------------------------------------------------------------
+
+% Configure signature page
 \clearpairofpagestyles
-\rofoot[\pagemark]{\pagemark}
+% \rofoot[\pagemark]{\pagemark}
 
-%----------------------------------------------------------------------------------------
-% Signature part
-%----------------------------------------------------------------------------------------
 \section*{Abschließende Erklärung}
-
 Ich versichere hiermit, dass ich meine Bachelor/Master-arbeit / Individuelle Projekt ...(Titel der Arbeit)... selbständig und ohne fremde Hilfe angefertigt habe, und dass ich alle von anderen Autoren wörtlich übernommenen Stellen wie auch die sich an die Gedankengänge anderer Autoren eng anlegenden Ausführungen meiner Arbeit besonders gekennzeichnet und die Quellen zitiert habe.
 
 \vspace*{3cm}
