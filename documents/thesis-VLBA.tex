@@ -194,8 +194,10 @@
 % Acronyms version wihtout package (manual)
 \section*{Glossar}
 \addcontentsline{toc}{section}{Glossar}
-% \include{abbreviations}
-\textbf{ACID} \textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation, \textbf{D}urability \\
+	% adding via file
+	\input{abbreviations}
+	% adding directly
+	%\textbf{ACID} \textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation, \textbf{D}urability \\
 \clearpage
 
 % 
@@ -235,7 +237,7 @@
 %
 % NOTES: 
 % 	- For large documents, instead of typing all the text inside here, it may be better
-% 	  splitting the content in multiple files and using \include or \includeonly
+% 	  splitting the content in multiple files and using \include or \includeonly or \input
 % 	- For English versions of text check commented lines near appropriare TEX commands
 % 
 % 
