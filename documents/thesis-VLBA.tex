@@ -1,23 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 
-%% Template of the department Very Large Business Applications (VLBA), CvO University Oldenburg 
-%% for bachelor and master theses, scientific papers, etc..
+%% Template of the department Very Large Business Applications (VLBA), CvO University Oldenburg. 
+%% It suppose to be used for bachelor and master theses, scientific papers, etc..
 %%
 %% Versions, dates and authors:
 %%		version 1 (16.04.2010) by Daniel Süpke
 %%		version 2 (18.09.2017) by Viktor Dmitriyev
 %%
 %% Note: 
-%%		Has only been tested with pdflatex, not latex (dvi). Still, there is
-%% 		theoretical support also for latex.
+%%		Has only been tested with pdflatex, not latex (dvi). 
+%%		Still, there is theoretical support also for latex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \documentclass[11pt]{scrartcl}
 %\documentclass[11pt]{scrbook}
 
 %----------------------------------------------------------------------------------------
-% PACKAGES
+% LATEX PACKAGES
 %----------------------------------------------------------------------------------------
 
 % encoding
@@ -80,8 +79,11 @@
 %----------------------------------------------------------------------------------------
 \input{own-styles-and-commands.tex}
 
+% Page settings for a bachelor/master
 \geometry{a4paper, left=3cm, right=3cm}
-%\geometry{a4paper,left=3cm,right=2.5cm}   % Please use these settings for a PhD-thesis
+
+% Page settings for a PhD-thesis
+%\geometry{a4paper,left=3cm,right=2.5cm}   
 
 % 
 % Managing acronyms that are done with package
@@ -161,9 +163,6 @@
 % Clear styles, and setting page numbers 
 %----------------------------------------------------------------------------------------
 \clearpairofpagestyles
-%\rofoot{\pagemark}
-%\refoot{\pagemark}
-
 \rohead{\pagemark}
 \rehead{\pagemark}
 
@@ -179,7 +178,7 @@
 \setcounter{tocdepth}{2}
 
 %----------------------------------------------------------------------------------------
-% Starting "roman" style numberting
+% Starting "roman" style numbering
 %----------------------------------------------------------------------------------------
 \pagenumbering{Roman}
 \setcounter{page}{1}
@@ -199,6 +198,7 @@
 \addcontentsline{toc}{section}{Glossar}
 	% adding via file
 	% \input{abbreviations}
+	
 	% adding directly
 	\textbf{ACID} \textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation, \textbf{D}urability \\
 \clearpage
@@ -210,20 +210,20 @@
 % \printglossary[type=\acronymtype]
 % \newpage
 
-\listoffigures
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 % \addcontentsline{toc}{section}{List of Figures}
+\listoffigures
 \newpage
 
-\listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 %\addcontentsline{toc}{section}{List of Tables}
+\listoftables
 \newpage
 
 %% Line spread
 \onehalfspacing
 
-% Start numbering again
+% Start numbering again from 1
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
@@ -232,6 +232,8 @@
 % --------------------------------
 \clearpairofpagestyles
 %\pagestyle{scrheadings}
+
+% top left on odd pages
 \lohead{\rightmark}
 
 % bottom right
@@ -246,11 +248,11 @@
 %
 % NOTES: 
 % 	- For large documents, instead of typing all the text inside here, it may be better
-% 	  splitting the content in multiple files and using \include or \includeonly or \input
+% 	  to split the content into multiple files and use command like \include or \includeonly or \input 
 % 	- For English versions of text check commented lines near appropriare TEX commands
 % 
-% 
 %----------------------------------------------------------------------------------------
+
 %----------------------------------------------------------------------------------------
 % CONTENT STARTS
 %----------------------------------------------------------------------------------------
